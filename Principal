@@ -1,0 +1,10 @@
+package ejercicio;
+
+public class Principal extends Ejercicio{
+
+    public static void main(String[] args) {
+      Ejercicio Obj= new Ejercicio();
+       Obj.me();
+    }
+    
+}
