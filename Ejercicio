@@ -1,0 +1,85 @@
+package ejercicio;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Ejercicio {
+    public void me(){
+    List <String> ListaOrdenada = new ArrayList<String>();
+    String[] palabrasArchivo=null;
+    String[]palabrasOrig = null;
+    
+  
+    Listaordenada.add("Esto es una prueba para no reprobar");
+        File archivo = null;
+      FileReader fr = null;
+      BufferedReader br = null;
+      try {
+         
+         archivo = new File ("C:\\prueba.txt");
+         fr = new FileReader (archivo);
+         br = new BufferedReader(fr);
+        
+        String linea; 
+           while ((linea=br.readLine())!=null){
+             palabrasArchivo=linea.split(" ");
+             }
+         
+           for(String nombre: ListaOrdenada){
+            palabrasOrig = nombre.split(" ");
+            }   
+         
+       
+           System.out.println("Muestra de las palabras del archivo");
+          for (int i = 0; i <palabrasArchivo.length; i++) {
+              System.out.println(palabrasArchivo[i]);   
+          }
+          
+          System.out.println("  ");
+          
+          System.out.println("Muestra de las palabras originales");
+          for (int i = 0; i <palabrasOrig.length; i++) {
+              System.out.println(palabrasOrig[i]);   
+          }           
+        System.out.println(" \n ----- \n");
+             String[ ]   arreglofin = new  String[palabrasOrig.length];
+             
+        
+          for (int i = 0; i < palabrasOrig.length; i++) {
+              for (int j = 0; j < palabrasOrigi.length; j++) {
+                  if (palabrasOrig[i].equals(palabrasArchivo[j])) {
+                      arreglofin[i]=palabrasOrig[i];
+                      
+                  }
+              }
+          }
+          
+          System.out.println("Muestra del arreglo final");
+          for (int i = 0; i < arreglofin.length; i++) {
+              System.out.print(arreglofin[i]+" ");
+          }
+       
+         
+         while((linea=br.readLine())!=null)
+            System.out.println(linea);
+      }
+      
+      catch(Exception e){
+         e.printStackTrace();
+      }finally
+      {
+        
+         try{                    
+            if( null != fr ){   
+               fr.close();     
+            }                  
+         }catch (Exception e2){ 
+            e2.printStackTrace();
+         }
+      }
+    }
+   }
+}
